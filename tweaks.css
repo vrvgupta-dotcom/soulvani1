@@ -1,0 +1,60 @@
+/* Tweaks panel */
+#tweaks-panel {
+  position: fixed; right: 18px; bottom: 18px; z-index: 90;
+  width: 280px;
+  background: #fff; color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  box-shadow: 0 30px 60px -20px rgba(42,24,56,0.35);
+  font-family: var(--ui);
+  display: none;
+}
+#tweaks-panel.on { display: block; }
+.tw-head {
+  padding: 14px 16px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid var(--hairline);
+}
+.tw-title {
+  font-family: var(--display); font-size: 18px; letter-spacing: 0.12em;
+}
+.tw-close {
+  width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--ink-mute);
+}
+.tw-close:hover { color: var(--ink); }
+.tw-body { padding: 16px; }
+.tw-section { margin-bottom: 18px; }
+.tw-label {
+  font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--ink-mute); margin-bottom: 10px;
+}
+.tw-seg {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px;
+  background: var(--bg-warm); padding: 4px; border-radius: 8px;
+}
+.tw-seg button {
+  padding: 8px; font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; border-radius: 6px;
+  color: var(--ink-soft); transition: all .2s;
+}
+.tw-seg button.on { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.tw-toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--hairline);
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.tw-toggle.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.tw-toggle .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-mute); }
+.tw-toggle.on .dot { background: var(--gold); }
+.tw-foot {
+  font-family: var(--serif); font-style: italic; font-size: 12px;
+  color: var(--ink-mute); border-top: 1px solid var(--hairline);
+  padding-top: 12px; margin-top: 8px; text-align: center;
+}
+body.theme-night #tweaks-panel { background: #1F1131; }
+body.theme-night .tw-seg { background: #2A1844; }
+body.theme-night .tw-seg button.on { background: #3D2459; color: var(--ink); }
