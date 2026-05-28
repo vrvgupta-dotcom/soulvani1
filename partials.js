@@ -4,8 +4,7 @@
 (function() {
   const page = document.body.dataset.page || 'home';
   const base = window.__assetBase || '';   // '../' on album pages, '' on home
-  // album-page links: when on /albums/, sibling pages stay flat; when on home, prefix with albums/
-  const albumPrefix = base ? '' : 'albums/';
+  const albumPrefix = 'albums/';
 
   // ============ NAV ============
   const navHTML = `
